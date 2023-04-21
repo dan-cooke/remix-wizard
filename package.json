@@ -21,10 +21,10 @@
 		"@remix-run/react": "^1.6.8",
 		"@remix-run/serve": "^1.6.8",
 		"react": "*",
-		"zod": "^3.21.4",
 		"react-dom": "*",
 		"regenerator-runtime": "*",
-		"tslib": "^2.0.0"
+		"tslib": "^2.0.0",
+		"zod": "^3.21.4"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.0",
@@ -32,6 +32,7 @@
 		"@remix-run/dev": "^1.6.8",
 		"@remix-run/eslint-config": "^1.6.8",
 		"@remix-run/node": "^1.6.8",
+		"@remix-run/react": "^1.15.0",
 		"@remix-run/serve": "^1.6.8",
 		"@semantic-release/npm": "^9.0.1",
 		"@testing-library/react": "13.4.0",
@@ -54,15 +55,23 @@
 		"jest": "28.1.1",
 		"jest-environment-jsdom": "28.1.1",
 		"prettier": "^2.6.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"react-test-renderer": "18.2.0",
 		"semantic-release": "^19.0.5",
 		"semver": "^7.3.8",
 		"ts-jest": "28.0.5",
 		"ts-node": "10.9.1",
+		"tslib": "^2.0.0",
 		"typescript": "~4.8.2",
 		"zod": "^3.21.4"
 	},
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org/"
+	},
+	"dependencies": {
+		"@remix-validated-form/with-zod": "^2.0.5",
+		"remix-validated-form": "^4.6.11",
+		"zod-form-data": "^2.0.1"
 	}
 }
