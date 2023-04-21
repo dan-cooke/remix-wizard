@@ -1,5 +1,5 @@
-import { createCookieSessionStorage, redirect } from "@remix-run/node";
-import { WizardConfig } from "./types";
+import { createCookieSessionStorage, redirect } from '@remix-run/node';
+import { WizardConfig } from './types';
 
 export const createWizard = (config: WizardConfig) => {
   let { routes, name, storage } = config;
@@ -8,10 +8,10 @@ export const createWizard = (config: WizardConfig) => {
     storage = createCookieSessionStorage({
       cookie: {
         name,
-        sameSite: "lax",
-        path: "/",
+        sameSite: 'lax',
+        path: '/',
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        secure: process.env.NODE_ENV === 'production',
       },
     });
   }
@@ -22,7 +22,7 @@ export const createWizard = (config: WizardConfig) => {
 
   return {
     register: async (request: Request) => {
-      const cookie = request.headers.get("cookie");
+      const cookie = request.headers.get('cookie');
       const session = await config.storage.getSession(cookie);
       const data = session.data || {};
 
@@ -38,7 +38,7 @@ export const createWizard = (config: WizardConfig) => {
          */
         async nextStep() {
           const headers = new Headers();
-          headers.append("Set-Cookie", await storage.commitSession(session));
+          headers.append('Set-Cookie', await storage.commitSession(session));
           const step = getStepFromUrl(request.url);
 
           return redirect(routes[step + 1], {
@@ -51,7 +51,7 @@ export const createWizard = (config: WizardConfig) => {
          */
         async prevStep() {
           const headers = new Headers();
-          headers.append("Set-Cookie", await storage.commitSession(session));
+          headers.append('Set-Cookie', await storage.commitSession(session));
           const step = getStepFromUrl(request.url);
           return redirect(routes[step - 1], {
             headers,
@@ -64,9 +64,9 @@ export const createWizard = (config: WizardConfig) => {
          */
         async jumpToStep(jumpTo: string | number) {
           const headers = new Headers();
-          headers.append("Set-Cookie", await storage.commitSession(session));
+          headers.append('Set-Cookie', await storage.commitSession(session));
           let step = jumpTo;
-          if (typeof jumpTo === "string") {
+          if (typeof jumpTo === 'string') {
             step = getStepFromUrl(jumpTo);
           }
           return redirect(routes[step], {

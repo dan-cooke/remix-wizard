@@ -1,5 +1,4 @@
-import type { Session, SessionData, SessionStorage } from "@remix-run/node";
-import { ZodSchema } from "zod";
+import type { SessionData, SessionStorage } from '@remix-run/node';
 
 export type WizardRegisterResponse = {
   data: SessionData;
