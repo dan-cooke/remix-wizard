@@ -23,7 +23,7 @@ export const createWizard = (config: WizardConfig) => {
   return {
     register: async (request: Request) => {
       const cookie = request.headers.get('cookie');
-      const session = await config.storage.getSession(cookie);
+      const session = await storage.getSession(cookie);
       const data = session.data || {};
 
       return {
@@ -40,6 +40,7 @@ export const createWizard = (config: WizardConfig) => {
           const headers = new Headers();
           headers.append('Set-Cookie', await storage.commitSession(session));
           const step = getStepFromUrl(request.url);
+          console.log(step, routes[step + 1], headers);
 
           return redirect(routes[step + 1], {
             headers,
