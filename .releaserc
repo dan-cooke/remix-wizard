@@ -1,5 +1,5 @@
 branches:
-  - main
+  - master
 debug: true
 ci: true
 dryRun: false
