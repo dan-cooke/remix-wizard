@@ -12,6 +12,7 @@ yarn add remix-wizard
 
 1. Create a wizard and specify your `routes`
 
+**oboarding.server.ts**
 ```.ts
 export const onboardingWizard = createWizard({
   name: 'onboarding-wizard',
@@ -25,6 +26,8 @@ export const onboardingWizard = createWizard({
 ```
 
 2. Import your wizard and call `register` in your action
+
+**routes/onboarding/users.tsx**
 
 ```.ts
 import { onboardingWizard } from './onboarding.server'
