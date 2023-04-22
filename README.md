@@ -9,6 +9,7 @@ yarn add remix-wizard
 ```
 
 ## Examples
+### Basic
 
 1. Create a wizard and specify your `routes`
 
@@ -62,5 +63,24 @@ export const loader = async ({ request }) => {
 
     return data?.['userProfile'] || {};
 };
+
+```
+
+### Use custom `SessionStorage`
+By default `remix-wizard` will use `createCookieSessionStorage` if you do not pass a `storage` paramter to the `createWizard` function. 
+
+But you can also use any other `SessionStorage` you wish.
+
+```.ts
+export const onboardingWizard = createWizard({
+  name: 'onboarding-wizard',
+  routes: ['/onboarding/org', '/onboarding/users'],
+  storage: createMemorySessionStorage({
+    cookie: {
+      name: 'onboarding-wizard',
+      httpOnly: true,
+    },
+  }),
+});
 
 ```
