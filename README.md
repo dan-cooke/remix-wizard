@@ -19,7 +19,7 @@ export const onboardingWizard = createWizard({
   routes: [
 	'/onboarding/org',
 	'/onboarding/users',
-	'/onboaring/finish'
+	'/onboarding/finish'
   ],
 });
 
