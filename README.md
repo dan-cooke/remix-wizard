@@ -97,26 +97,14 @@ export const action = ({ request }) => {
     const { save, nextStep, jumpToStep, prevStep, getHeaders } =
       await onboardingWizard.register(request);
 
-    // Here we are adding users to the session on every form submission
-    // Multiple users can be added in this step before we continue to the
-    // next step
-     if (formData.get('intent') === 'addUser') {
-      // Read the existing usrs array from the data object
-      const users = data?.['users'] || [user];
-
-      // Append the new user from the form data to this object
-      const newUser = {
-        email: formData.get('email'),
-        roles: [formData.get('role')],
-      };
-      const newUsers = [...users, newUser];
-
-      save('users', newUsers);
-
+    if (formData.get("intent") === "stayHere") {
       // The `getHeaders` function is used here to create the appropriate "Set-Cookie" header
-      // that contains the session data
-      return redirect('/onboarding/users', { headers: await getHeaders() });
+      // that contains the session data.
+      const headers = await getHeaders();
+
+      return redirect('/onboarding/users', { headers });
     }
+
 
     // Go to the next step
     return nextStep();

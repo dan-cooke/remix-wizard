@@ -29,6 +29,7 @@ export const createWizard = (config: WizardConfig) => {
       return {
         data,
         session,
+        storage,
         /**
          * In case you don't want to change the wizard step, but you want to save some data
          * @returns the headers to set on the response
