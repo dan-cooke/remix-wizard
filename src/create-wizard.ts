@@ -28,6 +28,16 @@ export const createWizard = (config: WizardConfig) => {
 
       return {
         data,
+        session,
+        /**
+         * In case you don't want to change the wizard step, but you want to save some data
+         * @returns the headers to set on the response
+         */
+        getHeaders: async () => {
+          const headers = new Headers();
+          headers.append('Set-Cookie', await storage.commitSession(session));
+          return headers;
+        },
         save: (key: string, data: any) => {
           session.set(key, data);
         },
