@@ -2394,11 +2394,6 @@
   dependencies:
     web-streams-polyfill "^3.1.1"
 
-"@remix-validated-form/with-zod@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@remix-validated-form/with-zod/-/with-zod-2.0.5.tgz#f26e8f7c697b89752952b9a2a0767a3481fe4774"
-  integrity sha512-HDKFlhtBbsVL1EWZkT9l8IVGg/yRgFEzLmNxk36gPBhCFLEZ0rIFlpJRC3lITD22Vm0SDDCG/iI0CqqaXzuRmw==
-
 "@rollup/pluginutils@^4.0.0":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.2.1.tgz#e6c6c3aba0744edce3fb2074922d3776c0af2a6d"
@@ -6117,11 +6112,6 @@ ignore@^5.1.1, ignore@^5.2.0:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.4.tgz#a291c0c6178ff1b960befe47fcdec301674a6324"
   integrity sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==
 
-immer@^9.0.12:
-  version "9.0.21"
-  resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.21.tgz#1e025ea31a40f24fb064f1fef23e931496330176"
-  integrity sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==
-
 import-fresh@^3.0.0, import-fresh@^3.2.1:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
@@ -7471,11 +7461,6 @@ lodash.escaperegexp@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.escaperegexp/-/lodash.escaperegexp-4.1.2.tgz#64762c48618082518ac3df4ccf5d5886dae20347"
   integrity sha512-TM9YBvyC84ZxE3rgfefxUWiQKLilstD6k7PTGt6wfbtXF8ixIJLOL3VYyV/z+ZiPLsVxAsKAFVwWlWeb2Y8Yyw==
-
-lodash.get@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
-  integrity sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==
 
 lodash.isfunction@^3.0.9:
   version "3.0.9"
@@ -9793,22 +9778,6 @@ remark-rehype@^9.0.0:
     mdast-util-to-hast "^11.0.0"
     unified "^10.0.0"
 
-remeda@^1.2.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/remeda/-/remeda-1.12.0.tgz#dd11ff8640ecf1fd11f3a7a0d8d577cbf579ba40"
-  integrity sha512-IuuWrP1UEyAafKHPQ6bSRGKUxvMh/Kla5LP8ujM/BMf3ciwt5M68j0vlYOl1pIv3J2pS+BMlFKqLtHoYuzcwYQ==
-
-remix-validated-form@^4.6.11:
-  version "4.6.11"
-  resolved "https://registry.yarnpkg.com/remix-validated-form/-/remix-validated-form-4.6.11.tgz#044825552ea31a586cc866d7c1172ae18506fd34"
-  integrity sha512-rgbFitoU9+FBg7fx/JKdpwGZ28m3Lg+F32cSMtXsMmLrH4s9HlAWcoNsuH4g8HNhoDu7UlSeNDLTyuuOCARRow==
-  dependencies:
-    immer "^9.0.12"
-    lodash.get "^4.4.2"
-    remeda "^1.2.0"
-    tiny-invariant "^1.2.0"
-    zustand "^4.3.0"
-
 require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
@@ -10669,11 +10638,6 @@ tiny-glob@^0.2.9:
   dependencies:
     globalyzer "0.1.0"
     globrex "^0.1.2"
-
-tiny-invariant@^1.2.0:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.3.1.tgz#8560808c916ef02ecfd55e66090df23a4b7aa642"
-  integrity sha512-AD5ih2NlSssTCwsMznbvwMZpJ1cbhkGd2uueNxzv2jDlEeZdU04JQfRnggJQ8DrcVBGjAsCKwFBbDlVNtEMlzw==
 
 tiny-relative-date@^1.3.0:
   version "1.3.0"
@@ -11547,22 +11511,10 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zod-form-data@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/zod-form-data/-/zod-form-data-2.0.1.tgz#b069b76ad8a47e2ee475f691db87db8afa9dd3f2"
-  integrity sha512-4jcsj3vFyFGINLLHEmehfOPKdcw+HqV65RwsV2IdyLHp9wpvGJRVXWg1yY8sq0ASEbQfTVBRtI7LcDGv3Qpj8g==
-
 zod@^3.21.4:
   version "3.21.4"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.21.4.tgz#10882231d992519f0a10b5dd58a38c9dabbb64db"
   integrity sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==
-
-zustand@^4.3.0:
-  version "4.3.7"
-  resolved "https://registry.yarnpkg.com/zustand/-/zustand-4.3.7.tgz#501b1f0393a7f1d103332e45ab574be5747fedce"
-  integrity sha512-dY8ERwB9Nd21ellgkBZFhudER8KVlelZm8388B5nDAXhO/+FZDhYMuRnqDgu5SYyRgz/iaf8RKnbUs/cHfOGlQ==
-  dependencies:
-    use-sync-external-store "1.2.0"
 
 zwitch@^2.0.0:
   version "2.0.4"

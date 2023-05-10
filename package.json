@@ -71,10 +71,5 @@
 	},
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org/"
-	},
-	"dependencies": {
-		"@remix-validated-form/with-zod": "^2.0.5",
-		"remix-validated-form": "^4.6.11",
-		"zod-form-data": "^2.0.1"
 	}
 }
